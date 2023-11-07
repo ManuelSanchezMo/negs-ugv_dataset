@@ -1,0 +1,9 @@
+/CMakeLists.txt
+.catkin_tools/
+build/
+devel/
+logs/
+install/
+*.bag
+doc/
+data/
