@@ -1,0 +1,105 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="stereo_camera">
+
+  <xacro:macro name="stereo_camera"
+    params="reference ns frame_id update_rate baseline hfov width height format near far">
+ <link name="left_camera">
+      <inertial>
+        <mass value="0.83"/>
+        <origin xyz="0.0 -0.06 0.72"/>
+        <inertia ixx="${(0.83 * (3.0*0.0516*0.0516 + 0.0717*0.0717)) / 12.0}" ixy="0" ixz="0"
+          iyy="${(0.83 * (3.0*0.0516*0.0516 + 0.0717*0.0717)) / 12.0}" iyz="0"
+          izz="${0.5 * 0.83 * (0.0516*0.0516)}"/>
+      </inertial>
+       <visual name="visual">
+                      <origin xyz="-.03 0.05 0.0" rpy="0 0 1.5707" />
+              <geometry>
+	         <mesh filename="package://husky_description/meshes/ZED.stl" scale="0.001 0.001 0.001"/> 
+         </geometry>
+      </visual>
+    </link>
+ <gazebo reference="left_camera">
+    <material>Gazebo/Grey</material>
+  </gazebo>
+ <link name="right_camera">
+      <inertial>
+        <mass value="0.83"/>
+        <origin xyz="0.15 0.06 0.72"/>
+        <inertia ixx="${(0.83 * (3.0*0.0516*0.0516 + 0.0717*0.0717)) / 12.0}" ixy="0" ixz="0"
+          iyy="${(0.83 * (3.0*0.0516*0.0516 + 0.0717*0.0717)) / 12.0}" iyz="0"
+          izz="${0.5 * 0.83 * (0.0516*0.0516)}"/>
+      </inertial>
+
+    </link>
+
+    <joint name="left_camera_joint" type="fixed" >
+        <origin xyz="0.15 -0.06 0.72"/>
+      <parent link="base_link" />
+      <child link="left_camera"/>
+    </joint>
+
+    <joint name="rigth_camera_joint" type="fixed" >
+        <origin xyz="0.15 0.06 0.72"/>
+      <parent link="base_link" />
+      <child link="right_camera"/>
+    </joint>
+    <gazebo reference="${reference}">
+      <sensor type="multicamera" name="stereo_camera">
+        <update_rate>${update_rate}</update_rate>
+        <camera name="left">
+          <pose>0 -0.06 0.52 0 0 0</pose>
+          <horizontal_fov>${hfov}</horizontal_fov>
+          <image>
+            <width>${width}</width>
+            <height>${height}</height>
+            <format>${format}</format>
+          </image>
+          <clip>
+            <near>${near}</near>
+            <far>${far}</far>
+          </clip>
+          <noise>
+            <type>gaussian</type>
+            <mean>0.0</mean>
+            <stddev>0.007</stddev>
+          </noise>
+        </camera>
+        <camera name="right">
+          <pose>0 0.06 0.52 0 0 0</pose>
+          <horizontal_fov>${hfov}</horizontal_fov>
+          <image>
+            <width>${width}</width>
+            <height>${height}</height>
+            <format>${format}</format>
+          </image>
+          <clip>
+            <near>${near}</near>
+            <far>${far}</far>
+          </clip>
+          <noise>
+            <type>gaussian</type>
+            <mean>0.0</mean>
+            <stddev>0.00</stddev>
+          </noise>
+        </camera>
+        <plugin name="stereo_camera_controller" filename="libgazebo_ros_multicamera.so">
+          <alwaysOn>true</alwaysOn>
+          <cameraName>${ns}/camera</cameraName>
+          <imageTopicName>image_raw</imageTopicName>
+          <cameraInfoTopicName>camera_info</cameraInfoTopicName>
+          <frameName>${frame_id}</frameName>
+          <hackBaseline>${baseline}</hackBaseline>
+          <!--<rightFrameName>right_camera_optical_frame</rightFrameName>-->
+          <!-- NOTE: Distortion is currently unused -->
+          <distortionK1>0.0</distortionK1>
+          <distortionK2>0.0</distortionK2>
+          <distortionK3>0.0</distortionK3>
+          <distortionT1>0.0</distortionT1>
+          <distortionT2>0.0</distortionT2>
+        </plugin>
+      </sensor>
+    </gazebo>
+  </xacro:macro>
+
+</robot>
+

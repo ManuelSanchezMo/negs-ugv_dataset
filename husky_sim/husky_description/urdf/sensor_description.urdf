@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="example">
+
+
+
+ <xacro:include filename="stereo_camera.urdf.xacro"/>
+  <stereo_camera reference="base_link" ns="husky"  frame_id="camera" update_rate="1" baseline="0.12" hfov="1.815142" width="1280" height="720" format="R8G8B8" near="0.02" far="300">
+
+  </stereo_camera>
+
+  <xacro:include filename="OS1-64.urdf.xacro"/>
+  <OS1-64 parent="base_link" name="os0_sensor" hz="10" samples="1024">
+    <origin xyz="0.09 0 0.79" rpy="0 0 0" />
+  </OS1-64>
+  <xacro:include filename="gps.urdf.xacro"/>
+<gps_sensor></gps_sensor>
+</robot>
+
