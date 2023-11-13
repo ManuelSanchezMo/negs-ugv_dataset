@@ -16,7 +16,7 @@ A full description of the dataset is given in the MDPI Sensors article: [https:/
 #### CITATION
 
 If you use this dataset, please cite it as:
-
+´´´
 @article{sanchezNEGS2022,  
 AUTHOR = {Sánchez, Manuel and Morales, Jesús and Martínez, Jorge L. and Fernández-Lozano, J. J. and García-Cerezo, Alfonso},  
 TITLE = {Automatically Annotated Dataset of a Ground Mobile Robot in Natural Environments via Gazebo Simulations},  
@@ -30,165 +30,21 @@ PubMedID = {35898100},
 ISSN = {1424-8220},  
 DOI = {10.3390/s22155599}  
 }
-        
+´´´        
 
-#### DATASETS
 
- **ENVIRONMENT**
 
-**DESCRIPTION**
+| ENVIRONMENT        | DESCRIPTION           | PATH  | DATASET LINKS|
+|--------------------|-----------------------|-------|--------------|
+|Urban   Park  #1      |  <ul><li>Point clouds: 2576</li><li>Stereo images: 6464</li><li>GNSS readings: 10344</li><li>IMU readings: 12650</li><li>Length: 76.08 m</li><li>Duration: 253 s</li></ul>|![Park_1](./imgs/image_12934.png)| <ul><li>ZIP FILE (human readable text format and jpeg images):[Park\_1.zip](http://u.uma.es/dsa/datasetpark_1/)</li>  </br>  </br> <li>ROSBAG :[Park\_1.bag.zip](http://u.uma.es/dsa/datasetpark_1/)</li> </ul>|
+|Urban   Park  #2      |  <ul><li>Point clouds: 7089</li><li>Stereo images: 15469</li><li>GNSS readings: 25471</li><li>IMU readings: 12650</li><li>Length: 76.08 m</li><li>Duration: 253 s</li></ul>|![Park_2](./imgs/image_12935.png)| <ul><li>ZIP FILE (human readable text format and jpeg images):[Park\_2.zip](http://u.uma.es/dsb/datasetpark_2/)</li>  </br>  </br> <li>ROSBAG : [Park\_2.bag.zip](http://u.uma.es/dsb/datasetpark_2/)|
+|Lake  #1      |  <ul><li>Point clouds: 6216</li><li>Stereo images: 15562</li><li>GNSS readings: 24900</li><li>IMU readings: 31100</li><li>Length: 186.85 m</li><li>Duration: 622 s</li></ul>|![Lake_1](./imgs/image_12936.png)| <ul><li>ZIP FILE (human readable text format and jpeg images):[Lake\_1.zip](http://u.uma.es/dr8/datasetlake_1/) </li>  </br>  </br> <li>ROSBAG :[Lake\_1.bag.zip](http://u.uma.es/dr8/datasetlake_1/)</li> </ul>|
+|Lake  #2      |  <ul><li>Point clouds: 6343</li><li>Stereo images: 15858</li><li>GNSS readings: 25375</li><li>IMU readings: 31700</li><li>Length: 190.45 m</li><li>Duration: 634 s </li></ul>|![Lake_2](./imgs/image_12937.png)| <ul><li>ZIP FILE (human readable text format and jpeg images):[Lake\_2.zip](http://u.uma.es/dr9/datasetlake_2/)</li>  </br>  </br> <li>ROSBAG : [Lake\_2.bag.zip](http://u.uma.es/dr9/datasetlake_2/)|
+|Forest  #1      |  <ul><li>Point clouds: 2451</li><li>Stereo images: 6125</li><li>GNSS readings: 9802</li><li>IMU readings: 12250</li><li>Length: 73.38 m</li><li>Duration: 245 s</li></ul>|![Forest_1](./imgs/image_12940.png)| <ul><li>ZIP FILE (human readable text format and jpeg images): [Forest\_1.zip](http://u.uma.es/dr4/datasetforest_1/) </li>  </br>  </br> <li>ROSBAG :[Forest\_1\_bag.zip](http://u.uma.es/dr4/datasetforest_1/)</li> </ul>|
+|Forest  #2      |  <ul><li>Point clouds: 2451</li><li>Stereo images: 6125</li><li>GNSS readings: 9802</li><li>IMU readings: 12250</li><li>Length: 73.38 m</li><li>Duration: 245 s </li></ul>|![Forest_2](./imgs/image_12941.png)| <ul><li>ZIP FILE (human readable text format and jpeg images):[Forest\_2.zip](http://u.uma.es/dr5/datasetforest_2/)</li>  </br>  </br> <li>ROSBAG : [Forest\_2.bag.zip](http://u.uma.es/dr5/datasetforest_2/)</li> </ul>|
+|Hill  #1      |  <ul><li>Point clouds: 5145</li><li>Stereo images: 13162</li><li>GNSS readings: 20583</li><li>IMU readings: 25700</li><li>Length: 153.10 m</li><li>Duration: 514 s</li></ul>|![Hill_1](./imgs/image_12938.png)| <ul><li>ZIP FILE (human readable text format and jpeg images): [Hill\_1.zip](http://u.uma.es/dr6/datasethill_1/)  </li>  </br>  </br> <li>ROSBAG :[Hill\_1\_bag.zip](http://u.uma.es/dr6/datasethill_1/) </li> </ul>|
+|Hill  #2      |  <ul><li>Point clouds: 5111</li><li>Stereo images: 13056</li><li>GNSS readings: 20444</li><li>IMU readings: 25550</li><li>Length: 159.34 m</li><li>Duration: 511 s </li></ul>|![Hill_2](./imgs/image_12939.png)| <ul><li>ZIP FILE (human readable text format and jpeg images):[Hill\_2.zip](http://u.uma.es/dr7/datasethill_2/) </li>  </br>  </br> <li>ROSBAG :[Hill\_2.bag.zip](http://u.uma.es/dr7/datasethill_2/)</li> </ul>|
 
-**PATH**
-
-**DATASET LINKS**
-
-**Urban**
-
-**Park**
-
- 
-
-#1
-
-*   Point clouds: 2576
-*   Stereo images: 6464
-*   GNSS readings: 10344
-*   IMU readings: 12650
-*   Length: 76.08 m
-*   Duration: 253 s
-
-![Park_1](./imgs/image_12934.png)
-
-ZIP FILE (human readable text format and jpeg images):  
-     [Park\_1.zip](http://u.uma.es/dsa/datasetpark_1/)
-
-ROSBAG:  
-     [Park\_1.bag.zip](http://u.uma.es/dsa/datasetpark_1/)  
-
-#2
-
-*   Point clouds: 7089
-*   Stereo images: 15469
-*   GNSS readings: 25471
-*   IMU readings: 35900
-*   Length: 217.51 m
-*   Duration: 718 s
-
-![Park_2](./imgs/image_12935.png)
-
-ZIP FILE (human readable text format and jpeg images):  
-     [Park\_2.zip](http://u.uma.es/dsb/datasetpark_2/) 
-
-ROSBAG:  
-     [Park\_2.bag.zip](http://u.uma.es/dsb/datasetpark_2/)
-
- **Lake** 
-
-#1
-
-*   Point clouds: 6216
-*   Stereo images: 15562
-*   GNSS readings: 24900
-*   IMU readings: 31100
-*   Length: 186.85 m
-*   Duration: 622 s
-
-![Lake_1](./imgs/image_12936.png)
-
-ZIP FILE (human readable text format and jpeg images):  
-     [Lake\_1.zip](http://u.uma.es/dr8/datasetlake_1/) 
-
-ROSBAG:  
-     [Lake\_1.bag.zip](http://u.uma.es/dr8/datasetlake_1/)  
-
-#2
-
-*   Point clouds: 6343
-*   Stereo images: 15858
-*   GNSS readings: 25375
-*   IMU readings: 31700
-*   Length: 190.45 m
-*   Duration: 634 s
-
-![Lake_2](./imgs/image_12937.png)
-
-ZIP FILE (human readable text format and jpeg images):  
-     [Lake\_2.zip](http://u.uma.es/dr9/datasetlake_2/)
-
-ROSBAG:  
-     [Lake\_2.bag.zip](http://u.uma.es/dr9/datasetlake_2/)
-
- **Forest** 
-
-#1  
-
-*   Point clouds: 2689
-*   Stereo images: 6723
-*   GNSS readings: 10758
-*   IMU readings: 13450
-*   Length: 80.52 m
-*   Duration: 269 s
-
-![Forest_1](./imgs/image_12940.png)
-
-ZIP FILE (human readable text format and jpeg images):  
-     [Forest\_1.zip](http://u.uma.es/dr4/datasetforest_1/)   
-
-ROSBAG:  
-     [Forest\_1\_bag.zip](http://u.uma.es/dr4/datasetforest_1/)
-
-#2  
-
-*   Point clouds: 2451
-*   Stereo images: 6125
-*   GNSS readings: 9802
-*   IMU readings: 12250
-*   Length: 73.38 m
-*   Duration: 245 s
-
-![Forest_2](./imgs/image_12941.png)
-
-ZIP FILE (human readable text format and jpeg images):  
-     [Forest\_2.zip](http://u.uma.es/dr5/datasetforest_2/)
-
-ROSBAG:  
-     [Forest\_2.bag.zip](http://u.uma.es/dr5/datasetforest_2/)
-
- **Hill** 
-
-#1  
-
-*   Point clouds: 5145
-*   Stereo images: 13162
-*   GNSS readings: 20583
-*   IMU readings: 25700
-*   Length: 153.10 m
-*   Duration: 514 s
-
-![Hill_1](./imgs/image_12938.png)
-
-ZIP FILE (human readable text format and jpeg images):  
-     [Hill\_1.zip](http://u.uma.es/dr6/datasethill_1/) 
-
-ROSBAG:  
-     [Hill\_1\_bag.zip](http://u.uma.es/dr6/datasethill_1/)  
-
-#2  
-
-*   Point clouds: 5111
-*   Stereo images: 13056
-*   GNSS readings: 20444
-*   IMU readings: 25550
-*   Length: 159.34 m
-*   Duration: 511 s
-
-![Hill_2](./imgs/image_12939.png)
-
-ZIP FILE (human readable text format and jpeg images):  
-    [Hill\_2.zip](http://u.uma.es/dr7/datasethill_2/) 
-
-ROSBAG:  
-     [Hill\_2.bag.zip](http://u.uma.es/dr7/datasethill_2/)
 
 #### SUPPLEMENTARY MATERIAL
 
