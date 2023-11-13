@@ -16,8 +16,8 @@ A full description of the dataset is given in the MDPI Sensors article: [https:/
 #### CITATION
 
 If you use this dataset, please cite it as:
-´´´
-@article{sanchezNEGS2022,  
+
+```@article{sanchezNEGS2022,  
 AUTHOR = {Sánchez, Manuel and Morales, Jesús and Martínez, Jorge L. and Fernández-Lozano, J. J. and García-Cerezo, Alfonso},  
 TITLE = {Automatically Annotated Dataset of a Ground Mobile Robot in Natural Environments via Gazebo Simulations},  
 JOURNAL = {Sensors},  
@@ -30,7 +30,7 @@ PubMedID = {35898100},
 ISSN = {1424-8220},  
 DOI = {10.3390/s22155599}  
 }
-´´´        
+```        
 
 
 
@@ -125,7 +125,7 @@ Each message is stored in one .csv file as a Nx4 matrix (being N the number of p
 
 - The intensity correponds to one of the 15 classes.
 
--
+
 
 They are stored in the folder `lidar/`. The name convention followed is:
 
@@ -178,7 +178,7 @@ Hardware requirements:
 Memory: 32GB RAM
 Graphics: Nvidia GTX 1050 
 
-INSTALLATION:
+## INSTALLATION:
 
 1. Extract models.zip into folder models in gazebo (usually in ~/.gazebo)
 2. Create folder simulator into catkin_ws/src
@@ -202,7 +202,7 @@ ros-melodic-geonav-transform
 export HUSKY_SENSOR_ARCH="true"
 export HUSKY_URDF_EXTRAS=~/catkin_ws/src/husky/husky_description/urdf/sensor_description.urdf
 ```
-USAGE:
+## USAGE:
 
 1. Change directory
 ```
