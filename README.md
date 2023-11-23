@@ -1,4 +1,3 @@
-beforecontenttitle     [](/cms/bloques/ajax/add-block/ "Add new block")
 
 NEGS-UGV Dataset
 ================
